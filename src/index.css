@@ -14,21 +14,46 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
+    /* Cores principais */
     --primary: 223 37% 17%; /* Cor principal: rgb(28, 34, 60) */
     --primary-foreground: 36 31% 85%; /* Cor secundária: rgb(230, 222, 203) */
+    --primary-light: 223 37% 27%;
+    --primary-dark: 223 37% 12%;
 
+    /* Cores secundárias */
     --secondary: 36 31% 85%; /* Cor secundária: rgb(230, 222, 203) */
     --secondary-foreground: 223 37% 17%; /* Cor principal: rgb(28, 34, 60) */
+    --secondary-light: 36 31% 95%;
+    --secondary-dark: 36 31% 75%;
 
+    /* Cores neutras */
+    --neutral-50: 220 20% 98%;
+    --neutral-100: 220 14% 96%;
+    --neutral-200: 220 13% 91%;
+    --neutral-300: 220 13% 86%;
+    --neutral-400: 220 13% 65%;
+    --neutral-500: 220 13% 45%;
+    --neutral-600: 220 13% 35%;
+    --neutral-700: 220 13% 25%;
+    --neutral-800: 220 13% 15%;
+    --neutral-900: 220 13% 9%;
+    --neutral-950: 220 13% 5%;
+
+    /* Cores de feedback */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 35 100% 60%;
+    --warning-foreground: 0 0% 0%;
+    --error: 0 84.2% 60.2%;
+    --error-foreground: 210 40% 98%;
+
+    /* Cores de interface */
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
     --accent: 36 31% 85%; /* Cor secundária como accent */
     --accent-foreground: 223 37% 17%; /* Cor principal como accent-foreground */
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 223 37% 17%; /* Cor principal para ring */
@@ -55,21 +80,46 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
+    /* Cores principais (modo escuro) */
     --primary: 223 37% 17%; /* Cor principal: rgb(28, 34, 60) */
     --primary-foreground: 36 31% 85%; /* Cor secundária: rgb(230, 222, 203) */
+    --primary-light: 223 37% 27%;
+    --primary-dark: 223 37% 12%;
 
+    /* Cores secundárias (modo escuro) */
     --secondary: 36 31% 85%; /* Cor secundária: rgb(230, 222, 203) */
     --secondary-foreground: 223 37% 17%; /* Cor principal: rgb(28, 34, 60) */
+    --secondary-light: 36 31% 95%;
+    --secondary-dark: 36 31% 75%;
 
+    /* Cores neutras (modo escuro) */
+    --neutral-50: 220 13% 5%;
+    --neutral-100: 220 13% 9%;
+    --neutral-200: 220 13% 15%;
+    --neutral-300: 220 13% 25%;
+    --neutral-400: 220 13% 35%;
+    --neutral-500: 220 13% 45%; 
+    --neutral-600: 220 13% 65%;
+    --neutral-700: 220 13% 86%;
+    --neutral-800: 220 13% 91%;
+    --neutral-900: 220 14% 96%;
+    --neutral-950: 220 20% 98%;
+
+    /* Cores de feedback (modo escuro) */
+    --success: 142 71% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 35 90% 55%;
+    --warning-foreground: 0 0% 0%;
+    --error: 0 62.8% 30.6%;
+    --error-foreground: 210 40% 98%;
+
+    /* Cores de interface (modo escuro) */
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 36 31% 85%; /* Cor secundária como accent */
     --accent-foreground: 223 37% 17%; /* Cor principal como accent-foreground */
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 36 31% 85%; /* Cor secundária para ring no modo escuro */
