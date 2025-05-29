@@ -9,6 +9,96 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      order_items: {
+        Row: {
+          created_at: string
+          id: number
+          order_id: string
+          price_at_purchase: number
+          product_id: number
+          quantity: number
+        }
+        Insert: {
+          created_at?: string
+          id?: number
+          order_id?: string
+          price_at_purchase: number
+          product_id: number
+          quantity: number
+        }
+        Update: {
+          created_at?: string
+          id?: number
+          order_id?: string
+          price_at_purchase?: number
+          product_id?: number
+          quantity?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "order_items_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "order_items_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "Product"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      orders: {
+        Row: {
+          created_at: string
+          customer_cpf: string | null
+          customer_email: string
+          customer_name: string
+          id: string
+          pagarme_id: string | null
+          shipping_address: Json
+          shipping_cost: number
+          status: string
+          subtotal: number
+          total_amount: number
+          tracking_code: string | null
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          customer_cpf?: string | null
+          customer_email: string
+          customer_name: string
+          id?: string
+          pagarme_id?: string | null
+          shipping_address: Json
+          shipping_cost: number
+          status: string
+          subtotal: number
+          total_amount: number
+          tracking_code?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          customer_cpf?: string | null
+          customer_email?: string
+          customer_name?: string
+          id?: string
+          pagarme_id?: string | null
+          shipping_address?: Json
+          shipping_cost?: number
+          status?: string
+          subtotal?: number
+          total_amount?: number
+          tracking_code?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       Product: {
         Row: {
           created_at: string
@@ -17,6 +107,7 @@ export type Database = {
           image_url: string
           name: string
           price: number
+          stock: number | null
         }
         Insert: {
           created_at?: string
@@ -25,6 +116,7 @@ export type Database = {
           image_url: string
           name: string
           price: number
+          stock?: number | null
         }
         Update: {
           created_at?: string
@@ -33,6 +125,40 @@ export type Database = {
           image_url?: string
           name?: string
           price?: number
+          stock?: number | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          cpf: string | null
+          created_at: string
+          default_ship_address: Json | null
+          full_name: string | null
+          id: string
+          phone: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          avatar_url?: string | null
+          cpf?: string | null
+          created_at?: string
+          default_ship_address?: Json | null
+          full_name?: string | null
+          id: string
+          phone?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          avatar_url?: string | null
+          cpf?: string | null
+          created_at?: string
+          default_ship_address?: Json | null
+          full_name?: string | null
+          id?: string
+          phone?: string | null
+          updated_at?: string | null
         }
         Relationships: []
       }

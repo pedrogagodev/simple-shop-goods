@@ -2,10 +2,13 @@
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
 import { useCart } from "@/context/CartContext";
+import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
+import UserMenu from "./UserMenu";
 
 const Navbar = () => {
   const { totalItems } = useCart();
+  const { user, loading } = useAuth();
   
   return (
     <nav className="bg-primary text-primary-foreground py-4 px-6 shadow-md sticky top-0 z-50">
@@ -26,6 +29,18 @@ const Navbar = () => {
               )}
             </Button>
           </Link>
+          
+          {!loading && (
+            user ? (
+              <UserMenu />
+            ) : (
+              <Link to="/auth">
+                <Button variant="secondary" size="sm">
+                  Entrar
+                </Button>
+              </Link>
+            )
+          )}
         </div>
       </div>
     </nav>
